@@ -5,7 +5,7 @@ class LoginForms(forms.Form):
                 label='Nome de Login', 
                 required=True, 
                 max_length=100,
-                widget=forms.PasswordInput(
+                widget=forms.TextInput(
                     attrs={
                         'class': 'form-control',
                         'placeholder': 'Ex.:Joao.silva',
