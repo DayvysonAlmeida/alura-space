@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
         <header class="cabecalho">
             <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
             {% for message in messages %}
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-primary">
                 <p id="messages">{{message}}</p>
             </div>
             {% endfor %}
@@ -57,7 +58,7 @@
                         {% endfor %}
                     </div>
                     <div>
-                        <button class="btn btn-success col-12" style="padding: top 5px;" type="submit">Logar</button>
+                        <button type="submit" class="btn btn-success col-12" style="padding: top 5px;">Logar</button>
                     </div>
                 </form>
             </section>
