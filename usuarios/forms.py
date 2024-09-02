@@ -1,3 +1,4 @@
+from typing import Any
 from django import forms
 
 class LoginForms(forms.Form):
@@ -71,3 +72,13 @@ class CadastroForms(forms.Form):
             }
         ),
     )
+        
+        def clean_nome_cadastro(self):
+                nome = self.cleaned_data.get("nome_cadastro")
+
+                if nome:
+                        nome = nome.strip()
+                        if " " in nome:
+                                raise forms.ValidationError("Espaços não são permitidos nesse campo")
+                        else:
+                                return nome
